@@ -3,7 +3,7 @@ var __extends = (this && this.__extends) || function (d, b) {
     function __() { this.constructor = d; }
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
-// LEFT_CAVE SCENE
+// EastExit1 SCENE
 var scenes;
 (function (scenes) {
     var EastExit1 = (function (_super) {
@@ -15,7 +15,7 @@ var scenes;
         // PUBLIC METHODS +++++++++++++++++++++
         // Start Method
         EastExit1.prototype.start = function () {
-            // add SouthImage 
+            // add Eastexit1Image 
             this._leftCaveImage = new createjs.Bitmap("../../Assets/images/EastExit1.jpg");
             this.addChild(this._leftCaveImage);
             this._gameLabel = new createjs.Text("You Fell in the pit and died", "20px Consolas", "#008000");
@@ -24,7 +24,7 @@ var scenes;
             this._gameLabel.x = config.Screen.CENTER_X + 190;
             this._gameLabel.y = config.Screen.CENTER_Y - 200;
             this.addChild(this._gameLabel);
-            // add the BACK button to the OVER scene
+            // add the StartOverButton button to the OVER scene
             this._startOverButton = new objects.Button("StartOverButton", config.Screen.CENTER_X, config.Screen.CENTER_Y + 180);
             this.addChild(this._startOverButton);
             // START_OVER Button event listener
@@ -38,7 +38,7 @@ var scenes;
         //EVENT HANDLERS ++++++++++++++++++++
         // START_OVER Button click event handler
         EastExit1.prototype._startOverButtonClick = function (event) {
-            // Switch to the INTRO Scene
+            // Switch to the Start Scene
             scene = config.Scene.START;
             changeScene();
         };

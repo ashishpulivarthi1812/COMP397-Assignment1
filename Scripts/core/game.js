@@ -71,21 +71,21 @@ function changeScene() {
             console.log("Starting INTRO Scene");
             break;
         case config.Scene.INTRO:
-            // show the MENU scene
+            // show the intro scene
             stage.removeAllChildren();
             intro = new scenes.Intro();
             currentScene = intro;
             console.log("Starting INTRO Scene");
             break;
         case config.Scene.LEFTZONE:
-            // show the PLAY scene
+            // show the leftzone scene
             stage.removeAllChildren();
             LeftZone = new scenes.LeftZone();
             currentScene = LeftZone;
             console.log("Starting LeftZone Scene");
             break;
         case config.Scene.RIGHTZONE:
-            // show the game OVER scene
+            // show the rightzone scene
             stage.removeAllChildren();
             RightZone = new scenes.RightZone();
             currentScene = RightZone;
@@ -162,14 +162,14 @@ function changeScene() {
             console.log("Starting WEST Scene");
             break;
         case config.Scene.WESTEXIT1:
-            // ENTER WEST SCENE
+            // ENTER WESTExit1 SCENE
             stage.removeAllChildren();
             WestExit1 = new scenes.WestExit1();
             currentScene = WestExit1;
             console.log("Starting WestExit1 Scene");
             break;
         case config.Scene.WESTEXIT2:
-            // ENTER WEST SCENE
+            // ENTER WESTExit2 SCENE
             stage.removeAllChildren();
             WestExit2 = new scenes.WestExit2();
             currentScene = WestExit2;

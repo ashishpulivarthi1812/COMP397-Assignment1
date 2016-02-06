@@ -3,7 +3,7 @@ var __extends = (this && this.__extends) || function (d, b) {
     function __() { this.constructor = d; }
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
-// INTRO SCENE
+// Start SCENE
 var scenes;
 (function (scenes) {
     var Start = (function (_super) {
@@ -38,7 +38,7 @@ var scenes;
         //EVENT HANDLERS ++++++++++++++++++++
         // LEFTZONE Button click event handler
         Start.prototype._leftCaveButtonClick = function (event) {
-            // Switch to the LEFTZONE Scene
+            // Switch to the Intro Scene
             scene = config.Scene.INTRO;
             changeScene();
         };

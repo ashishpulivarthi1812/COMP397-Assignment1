@@ -3,7 +3,7 @@ var __extends = (this && this.__extends) || function (d, b) {
     function __() { this.constructor = d; }
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
-// LEFT_CAVE SCENE
+// SouthExit2 SCENE
 var scenes;
 (function (scenes) {
     var SouthExit2 = (function (_super) {
@@ -15,7 +15,7 @@ var scenes;
         // PUBLIC METHODS +++++++++++++++++++++
         // Start Method
         SouthExit2.prototype.start = function () {
-            // add SouthImage 
+            // add SOUTHEXIT2Image 
             this._leftCaveImage = new createjs.Bitmap("../../Assets/images/SouthExit2.jpg");
             this.addChild(this._leftCaveImage);
             this._gameLabel = new createjs.Text("You are dead you choosed a wrong route zombiee ate you", "20px Consolas", "#008000");
@@ -38,7 +38,7 @@ var scenes;
         //EVENT HANDLERS ++++++++++++++++++++
         // START_OVER Button click event handler
         SouthExit2.prototype._startOverButtonClick = function (event) {
-            // Switch to the INTRO Scene
+            // Switch to the Start Scene
             scene = config.Scene.START;
             changeScene();
         };

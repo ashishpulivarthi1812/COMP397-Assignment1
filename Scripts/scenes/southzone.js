@@ -3,7 +3,7 @@ var __extends = (this && this.__extends) || function (d, b) {
     function __() { this.constructor = d; }
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
-// Northimage SCENE
+// southzone SCENE
 var scenes;
 (function (scenes) {
     var southzone = (function (_super) {
@@ -15,7 +15,7 @@ var scenes;
         // PUBLIC METHODS +++++++++++++++++++++
         // Start Method
         southzone.prototype.start = function () {
-            // add north Image
+            // add southzone Image
             this._leftCaveImage = new createjs.Bitmap("../../Assets/images/SouthExitImage.jpg");
             this.addChild(this._leftCaveImage);
             this._gameLabel = new createjs.Text("Zombiee saw you try to escape choose an exit between Southexit1 and Southexit2", "20px Consolas", "#008000");
@@ -24,15 +24,15 @@ var scenes;
             this._gameLabel.x = config.Screen.CENTER_X + 190;
             this._gameLabel.y = config.Screen.CENTER_Y - 200;
             this.addChild(this._gameLabel);
-            // add the NorthExit1 button to the MENU scene
+            // add the SOUTHEXIT1 button to the MENU scene
             this._leftCaveButton = new objects.Button("SouthExitButton1", config.Screen.CENTER_X - 100, config.Screen.CENTER_Y + 160);
             this.addChild(this._leftCaveButton);
-            // NorthExit1 Button event listener
+            // SOUTHEXIT1 Button event listener
             this._leftCaveButton.on("click", this._leftCaveButtonClick, this);
-            // add the NorthExit2 button to the MENU scene
+            // add the SouthExit2Button button to the MENU scene
             this._rightCaveButton = new objects.Button("SouthExit2Button", config.Screen.CENTER_X - 100, config.Screen.CENTER_Y + 250);
             this.addChild(this._rightCaveButton);
-            // NorthExit2 Button event listener
+            // SouthExit2Button Button event listener
             this._rightCaveButton.on("click", this._rightCaveButtonClick, this);
             // add this scene to the global stage container
             stage.addChild(this);
@@ -41,15 +41,15 @@ var scenes;
         southzone.prototype.update = function () {
         };
         //EVENT HANDLERS ++++++++++++++++++++
-        // NorthExit1 Button click event handler
+        // SOUTHEXIT1 Button click event handler
         southzone.prototype._leftCaveButtonClick = function (event) {
-            // Switch to the NorthExit1 Scene
+            // Switch to the SOUTHEXIT1 Scene
             scene = config.Scene.SOUTHEXIT1;
             changeScene();
         };
-        // NorthExit2 Button click event handler
+        // SOUTHEXIT2 Button click event handler
         southzone.prototype._rightCaveButtonClick = function (event) {
-            // Switch to the NorthExit2 Scene
+            // Switch to the SOUTHEXIT2 Scene
             scene = config.Scene.SOUTHEXIT2;
             changeScene();
         };

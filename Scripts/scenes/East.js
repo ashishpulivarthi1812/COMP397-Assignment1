@@ -3,7 +3,7 @@ var __extends = (this && this.__extends) || function (d, b) {
     function __() { this.constructor = d; }
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
-// LEFT_CAVE SCENE
+// East SCENE
 var scenes;
 (function (scenes) {
     var East = (function (_super) {
@@ -24,7 +24,7 @@ var scenes;
             this._gameLabel.x = config.Screen.CENTER_X + 190;
             this._gameLabel.y = config.Screen.CENTER_Y - 200;
             this.addChild(this._gameLabel);
-            // add the BACK button to the OVER scene
+            // add the startover button to the OVER scene
             this._startOverButton = new objects.Button("StartOverButton", config.Screen.CENTER_X, config.Screen.CENTER_Y + 180);
             this.addChild(this._startOverButton);
             // START_OVER Button event listener

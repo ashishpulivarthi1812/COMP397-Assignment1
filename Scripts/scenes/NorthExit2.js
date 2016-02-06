@@ -15,7 +15,7 @@ var scenes;
         // PUBLIC METHODS +++++++++++++++++++++
         // Start Method
         NorthExit2.prototype.start = function () {
-            // add SouthImage 
+            // add NorthExit2 
             this._leftCaveImage = new createjs.Bitmap("../../Assets/images/NorthExit2image.jpg");
             this.addChild(this._leftCaveImage);
             this._gameLabel = new createjs.Text("You are dead you choosed a wrong route", "20px Consolas", "#008000");
