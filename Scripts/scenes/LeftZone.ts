@@ -35,17 +35,17 @@ module scenes {
                 config.Screen.CENTER_Y + 180);
             this.addChild(this._leftCaveButton);
             
-            // LEFT_CAVE Button event listener
+            // NORTH Button event listener
             this._leftCaveButton.on("click", this._leftCaveButtonClick, this);
             
-            // add the LEFTZONE button to the MENU scene
+            // add the SouthButton button to the MENU scene
             this._rightCaveButton = new objects.Button(
                 "SouthButton",
                 config.Screen.CENTER_X + 100,
                 config.Screen.CENTER_Y + 180);
             this.addChild(this._rightCaveButton);
             
-            // LEFT_CAVE Button event listener
+            // SouthButton Button event listener
             this._rightCaveButton.on("click", this._rightCaveButtonClick, this);
 
 
@@ -61,16 +61,16 @@ module scenes {
         
         //EVENT HANDLERS ++++++++++++++++++++
         
-        // LEFT_CAVE Button click event handler
+        // NORTHZONE Button click event handler
         private _leftCaveButtonClick(event: createjs.MouseEvent) {
-            // Switch to the LEFT_CAVE Scene
+            // Switch to the NORTHZONE Scene
             scene = config.Scene.NORTHZONE;
             changeScene();
         }
         
-        // LEFT_CAVE Button click event handler
+        // SOUTHZON Button click event handler
         private _rightCaveButtonClick(event: createjs.MouseEvent) {
-            // Switch to the LEFT_CAVE Scene
+            // Switch to the SOUTHZON Scene
             scene = config.Scene.SOUTHZONE;
             changeScene();
         }

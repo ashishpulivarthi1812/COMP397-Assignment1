@@ -3,7 +3,7 @@ var __extends = (this && this.__extends) || function (d, b) {
     function __() { this.constructor = d; }
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
-// LEFT_CAVE SCENE
+// LEFTZONE SCENE
 var scenes;
 (function (scenes) {
     var RightCave = (function (_super) {
@@ -15,7 +15,7 @@ var scenes;
         // PUBLIC METHODS +++++++++++++++++++++
         // Start Method
         RightCave.prototype.start = function () {
-            // add LeftCave Image
+            // add LeftZone Image
             this._rightCaveImage = new createjs.Bitmap("../../Assets/images/RightZone.jpg");
             this.addChild(this._rightCaveImage);
             this._gameLabel = new createjs.Text("You have to choose a route between east or west to  go home", "20px Consolas", "#008000");

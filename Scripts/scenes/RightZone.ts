@@ -16,7 +16,7 @@ module scenes {
         
         // Start Method
         public start(): void {
-            // add LeftCave Image
+            // add RightZone Image
             this._rightCaveImage = new createjs.Bitmap("../../Assets/images/RightZone.jpg");
             this.addChild(this._rightCaveImage);
             
@@ -27,24 +27,24 @@ module scenes {
             this._gameLabel.y = config.Screen.CENTER_Y -200;
             this.addChild(this._gameLabel);
 
-            // add the LEFT_CAVE button to the MENU scene
+            // add the East button to the MENU scene
             this._leftCaveButton = new objects.Button(
                 "East",
                 config.Screen.CENTER_X - 100,
                 config.Screen.CENTER_Y + 180);
             this.addChild(this._leftCaveButton);
             
-            // LEFT_CAVE Button event listener
+            // East Button event listener
             this._leftCaveButton.on("click", this._leftCaveButtonClick, this);
             
-            // add the LEFT_CAVE button to the MENU scene
+            // add the West button to the MENU scene
             this._rightCaveButton = new objects.Button(
                 "West",
                 config.Screen.CENTER_X + 100,
                 config.Screen.CENTER_Y + 180);
             this.addChild(this._rightCaveButton);
             
-            // LEFT_CAVE Button event listener
+            // West Button event listener
             this._rightCaveButton.on("click", this._rightCaveButtonClick, this);
 
 
@@ -60,16 +60,16 @@ module scenes {
         
         //EVENT HANDLERS ++++++++++++++++++++
         
-        // LEFT_CAVE Button click event handler
+        // EAST Button click event handler
         private _leftCaveButtonClick(event: createjs.MouseEvent) {
-            // Switch to the LEFT_CAVE Scene
+            // Switch to the EAST Scene
             scene = config.Scene.EAST;
             changeScene();
         }
         
-        // LEFT_CAVE Button click event handler
+        // WEST Button click event handler
         private _rightCaveButtonClick(event: createjs.MouseEvent) {
-            // Switch to the LEFT_CAVE Scene
+            // Switch to the WEST Scene
             scene = config.Scene.WEST;
             changeScene();
         }

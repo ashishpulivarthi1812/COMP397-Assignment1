@@ -16,7 +16,7 @@ module scenes {
         
         // Start Method
         public start(): void {
-            // add Intro Image
+            // add startgame Image
             this._introImage = new createjs.Bitmap("../../Assets/images/StartGame.jpg");
             this.addChild(this._introImage);
             
@@ -34,7 +34,7 @@ module scenes {
                 config.Screen.CENTER_Y + 160);
             this.addChild(this._leftCaveButton);
             
-            // LEFT_CAVE Button event listener
+            // StartButton Button event listener
             this._leftCaveButton.on("click", this._leftCaveButtonClick, this);
             
             
