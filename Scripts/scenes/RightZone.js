@@ -15,25 +15,45 @@ var scenes;
         // PUBLIC METHODS +++++++++++++++++++++
         // Start Method
         RightZone.prototype.start = function () {
-            // add LeftCave Image
+            // add RightZone Image
             this._rightCaveImage = new createjs.Bitmap("../../Assets/images/RightZone.jpg");
             this.addChild(this._rightCaveImage);
-            this._gameLabel = new createjs.Text("You have to choose a route between east or west to  go home", "20px Consolas", "#008000");
+            this._gameLabel = new createjs.Text("You have to choose a route  to  go home", "20px Consolas", "#008000");
             this._gameLabel.regX = this._gameLabel.getMeasuredWidth() * 0.5;
             this._gameLabel.regY = this._gameLabel.getMeasuredHeight() * 0.5;
             this._gameLabel.x = config.Screen.CENTER_X + 190;
             this._gameLabel.y = config.Screen.CENTER_Y - 200;
             this.addChild(this._gameLabel);
-            // add the LEFT_CAVE button to the MENU scene
+            // add the East button to the MENU scene
             this._leftCaveButton = new objects.Button("East", config.Screen.CENTER_X - 100, config.Screen.CENTER_Y + 180);
             this.addChild(this._leftCaveButton);
-            // LEFT_CAVE Button event listener
+            // East Button event listener
             this._leftCaveButton.on("click", this._leftCaveButtonClick, this);
-            // add the LEFT_CAVE button to the MENU scene
+            // add the EastExit1Button button to the MENU scene
+            this._EastExit1Button = new objects.Button("EastExit1Button", config.Screen.CENTER_X - 100, config.Screen.CENTER_Y - 100);
+            this.addChild(this._EastExit1Button);
+            // EastExit1Button event listener
+            this._EastExit1Button.on("click", this._EastExit1ButtonClick, this);
+            // add the EastExit2Button to the MENU scene
+            this._EastExit2Button = new objects.Button("EastExit2Button", config.Screen.CENTER_X - 100, config.Screen.CENTER_Y + 30);
+            this.addChild(this._EastExit2Button);
+            // EastExit2Button event listener
+            this._EastExit2Button.on("click", this._EastExit2ButtonClick, this);
+            // add the West button to the MENU scene
             this._rightCaveButton = new objects.Button("West", config.Screen.CENTER_X + 100, config.Screen.CENTER_Y + 180);
             this.addChild(this._rightCaveButton);
-            // LEFT_CAVE Button event listener
+            // West Button event listener
             this._rightCaveButton.on("click", this._rightCaveButtonClick, this);
+            // add the WestExit1Button to the MENU scene
+            this._WestExit1Button = new objects.Button("WestExit1Button", config.Screen.CENTER_X + 100, config.Screen.CENTER_Y - 100);
+            this.addChild(this._WestExit1Button);
+            // WestExit1Button event listener
+            this._WestExit1Button.on("click", this._WestExit1ButtonClick, this);
+            // add the WestExit2button to the MENU scene
+            this._WestExit2Button = new objects.Button("WestExit2button", config.Screen.CENTER_X + 100, config.Screen.CENTER_Y + 30);
+            this.addChild(this._WestExit2Button);
+            // WestExit2button event listener
+            this._WestExit2Button.on("click", this._WestExit2ButtonClick, this);
             // add this scene to the global stage container
             stage.addChild(this);
         };
@@ -41,15 +61,39 @@ var scenes;
         RightZone.prototype.update = function () {
         };
         //EVENT HANDLERS ++++++++++++++++++++
-        // LEFT_CAVE Button click event handler
+        // EAST Button click event handler
         RightZone.prototype._leftCaveButtonClick = function (event) {
-            // Switch to the LEFT_CAVE Scene
+            // Switch to the EAST Scene
             scene = config.Scene.EAST;
             changeScene();
         };
-        // LEFT_CAVE Button click event handler
+        // EastExit1Button click event handler
+        RightZone.prototype._EastExit1ButtonClick = function (event) {
+            // Switch to the EastExit1 Scene
+            scene = config.Scene.EASTEXIT1;
+            changeScene();
+        };
+        // EastExit2Button click event handler
+        RightZone.prototype._EastExit2ButtonClick = function (event) {
+            // Switch to the EastExit2 Scene
+            scene = config.Scene.EASTEXIT2;
+            changeScene();
+        };
+        // WestExit1Button click event handler
+        RightZone.prototype._WestExit1ButtonClick = function (event) {
+            // Switch to the WestExit Scene
+            scene = config.Scene.WESTEXIT1;
+            changeScene();
+        };
+        // WestExit2Button click event handler
+        RightZone.prototype._WestExit2ButtonClick = function (event) {
+            // Switch to the WestExit2 Scene
+            scene = config.Scene.WESTEXIT2;
+            changeScene();
+        };
+        // WEST Button click event handler
         RightZone.prototype._rightCaveButtonClick = function (event) {
-            // Switch to the LEFT_CAVE Scene
+            // Switch to the WEST Scene
             scene = config.Scene.WEST;
             changeScene();
         };

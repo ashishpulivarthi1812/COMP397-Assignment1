@@ -1,4 +1,4 @@
-// LEFT_CAVE SCENE
+// West SCENE
 module scenes {
     export class West extends objects.Scene {
         //PRIVATE INSTANCE VARIABLES ++++++++++++
@@ -53,7 +53,7 @@ module scenes {
         
         // START_OVER Button click event handler
         private _startOverButtonClick(event: createjs.MouseEvent) {
-            // Switch to the INTRO Scene
+            // Switch to the intro Scene
             scene = config.Scene.INTRO;
             changeScene();
         }

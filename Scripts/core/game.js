@@ -11,9 +11,17 @@ var intro;
 var LeftZone;
 var RightZone;
 var northzone;
+var NorthExit1;
+var NorthExit2;
 var southzone;
+var SouthExit1;
+var SouthExit2;
 var East;
+var EastExit1;
+var EastExit2;
 var West;
+var WestExit1;
+var WestExit2;
 function init() {
     // create a reference the HTML canvas Element
     canvas = document.getElementById("canvas");
@@ -90,6 +98,20 @@ function changeScene() {
             currentScene = northzone;
             console.log("Starting northzone Scene");
             break;
+        case config.Scene.NORTHEXIT1:
+            // ENTER NORTHEXIT1 scene
+            stage.removeAllChildren();
+            NorthExit1 = new scenes.NorthExit1();
+            currentScene = NorthExit1;
+            console.log("Starting NorthExit1 Scene");
+            break;
+        case config.Scene.NORTHEXIT2:
+            // ENTER NorthExit2 scene
+            stage.removeAllChildren();
+            NorthExit2 = new scenes.NorthExit2();
+            currentScene = NorthExit2;
+            console.log("Starting NorthExit2 Scene");
+            break;
         case config.Scene.SOUTHZONE:
             // ENTER SOUTHZONE SCENE
             stage.removeAllChildren();
@@ -97,19 +119,61 @@ function changeScene() {
             currentScene = southzone;
             console.log("Starting southzone Scene");
             break;
+        case config.Scene.SOUTHEXIT1:
+            // ENTER SouthExit1 scene
+            stage.removeAllChildren();
+            SouthExit1 = new scenes.SouthExit1();
+            currentScene = SouthExit1;
+            console.log("Starting SouthExit1 Scene");
+            break;
+        case config.Scene.SOUTHEXIT2:
+            // ENTER SouthExit2 scene
+            stage.removeAllChildren();
+            SouthExit2 = new scenes.SouthExit2();
+            currentScene = SouthExit2;
+            console.log("Starting SouthExit2 Scene");
+            break;
         case config.Scene.EAST:
-            // ENTER SOUTHZONE SCENE
+            // ENTER EAST SCENE
             stage.removeAllChildren();
             East = new scenes.East();
             currentScene = East;
-            console.log("Starting southzone Scene");
+            console.log("Starting EAST Scene");
+            break;
+        case config.Scene.EASTEXIT1:
+            // ENTER EastExit1 SCENE
+            stage.removeAllChildren();
+            EastExit1 = new scenes.EastExit1();
+            currentScene = EastExit1;
+            console.log("Starting EastExit1 Scene");
+            break;
+        case config.Scene.EASTEXIT2:
+            // ENTER EastEXIT2 SCENE
+            stage.removeAllChildren();
+            EastExit2 = new scenes.EastExit2();
+            currentScene = EastExit2;
+            console.log("Starting EastEXIT2 Scene");
             break;
         case config.Scene.WEST:
-            // ENTER SOUTHZONE SCENE
+            // ENTER WEST SCENE
             stage.removeAllChildren();
             West = new scenes.West();
             currentScene = West;
-            console.log("Starting southzone Scene");
+            console.log("Starting WEST Scene");
+            break;
+        case config.Scene.WESTEXIT1:
+            // ENTER WEST SCENE
+            stage.removeAllChildren();
+            WestExit1 = new scenes.WestExit1();
+            currentScene = WestExit1;
+            console.log("Starting WestExit1 Scene");
+            break;
+        case config.Scene.WESTEXIT2:
+            // ENTER WEST SCENE
+            stage.removeAllChildren();
+            WestExit2 = new scenes.WestExit2();
+            currentScene = WestExit2;
+            console.log("Starting WestExit2 Scene");
             break;
     }
     console.log(currentScene.numChildren);

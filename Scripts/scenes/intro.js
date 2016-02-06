@@ -27,12 +27,12 @@ var scenes;
             // add the LEFTZONE button to the MENU scene
             this._leftCaveButton = new objects.Button("leftzone", config.Screen.CENTER_X - 100, config.Screen.CENTER_Y + 160);
             this.addChild(this._leftCaveButton);
-            // LEFT_CAVE Button event listener
+            // EFTZONE Button event listener
             this._leftCaveButton.on("click", this._leftCaveButtonClick, this);
             // add the RIGHTZONE button to the MENU scene
             this._rightCaveButton = new objects.Button("Rightzoneimage", config.Screen.CENTER_X - 100, config.Screen.CENTER_Y + 250);
             this.addChild(this._rightCaveButton);
-            // LEFT_CAVE Button event listener
+            // RIGHTZONE Button event listener
             this._rightCaveButton.on("click", this._rightCaveButtonClick, this);
             // add this scene to the global stage container
             stage.addChild(this);
@@ -47,9 +47,9 @@ var scenes;
             scene = config.Scene.LEFTZONE;
             changeScene();
         };
-        // LEFT_CAVE Button click event handler
+        // RIGHTZONE Button click event handler
         Intro.prototype._rightCaveButtonClick = function (event) {
-            // Switch to the LEFT_CAVE Scene
+            // Switch to the RIGHTZONE Scene
             scene = config.Scene.RIGHTZONE;
             changeScene();
         };

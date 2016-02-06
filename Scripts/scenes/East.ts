@@ -1,4 +1,4 @@
-// LEFT_CAVE SCENE
+// East SCENE
 module scenes {
     export class East extends objects.Scene {
         //PRIVATE INSTANCE VARIABLES ++++++++++++
@@ -28,7 +28,7 @@ module scenes {
             this._gameLabel.y = config.Screen.CENTER_Y -200;
             this.addChild(this._gameLabel);
             
-            // add the BACK button to the OVER scene
+            // add the startover button to the OVER scene
             this._startOverButton = new objects.Button(
                 "StartOverButton",
                 config.Screen.CENTER_X,

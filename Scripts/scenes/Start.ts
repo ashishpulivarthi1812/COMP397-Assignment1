@@ -1,4 +1,4 @@
-// INTRO SCENE
+// Start SCENE
 module scenes {
     export class Start extends objects.Scene {
         //PRIVATE INSTANCE VARIABLES ++++++++++++
@@ -53,7 +53,7 @@ module scenes {
         
         // LEFTZONE Button click event handler
         private _leftCaveButtonClick(event: createjs.MouseEvent) {
-            // Switch to the LEFTZONE Scene
+            // Switch to the Intro Scene
             scene = config.Scene.INTRO;
             changeScene();
         }

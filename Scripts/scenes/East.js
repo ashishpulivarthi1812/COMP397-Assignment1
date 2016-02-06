@@ -15,7 +15,7 @@ var scenes;
         // PUBLIC METHODS +++++++++++++++++++++
         // Start Method
         East.prototype.start = function () {
-            // add north Image
+            // add Eastimage Image
             this._leftCaveImage = new createjs.Bitmap("../../Assets/images/Eastimage.jpg");
             this.addChild(this._leftCaveImage);
             this._gameLabel = new createjs.Text("You are dead you choosed a wrong route", "20px Consolas", "#008000");

@@ -15,7 +15,7 @@ var scenes;
         // PUBLIC METHODS +++++++++++++++++++++
         // Start Method
         West.prototype.start = function () {
-            // add north Image
+            // add Westimage
             this._leftCaveImage = new createjs.Bitmap("../../Assets/images/Westimage.jpg");
             this.addChild(this._leftCaveImage);
             this._gameLabel = new createjs.Text("You Survived and you choosed right path you can reach home", "20px Consolas", "#008000");

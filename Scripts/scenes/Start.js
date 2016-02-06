@@ -15,7 +15,7 @@ var scenes;
         // PUBLIC METHODS +++++++++++++++++++++
         // Start Method
         Start.prototype.start = function () {
-            // add Intro Image
+            // add startgame Image
             this._introImage = new createjs.Bitmap("../../Assets/images/StartGame.jpg");
             this.addChild(this._introImage);
             this._gameLabel = new createjs.Text(" Can you Escape Zombie world", "20px Consolas", "#008000");
@@ -27,7 +27,7 @@ var scenes;
             // add the StartButton button to the MENU scene
             this._leftCaveButton = new objects.Button("StartButton", config.Screen.CENTER_X - 100, config.Screen.CENTER_Y + 160);
             this.addChild(this._leftCaveButton);
-            // LEFT_CAVE Button event listener
+            // StartButton Button event listener
             this._leftCaveButton.on("click", this._leftCaveButtonClick, this);
             // add this scene to the global stage container
             stage.addChild(this);
